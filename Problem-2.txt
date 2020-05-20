@@ -1,0 +1,23 @@
+-Problem #2
+	Given an array of integers, return a new array such that each element at index
+	i of the new array is the product of all the numbers in the original array 
+	except the one at i.
+
+	For example, if our input was [1, 2, 3, 4, 5], the expected output would be 
+	[120, 60, 40, 30, 24]. If our input was [3, 2, 1], the expected output would be 
+	[2, 3, 6].
+
+	Follow-up: what if you can't use division?
+
+-Thought Process
+	Function inputs a list N.
+	First for loop which takes one index i at a time. Call index [i].
+	Second for loop also takes one index at a time. Call index [k].
+	Name vairable "product" equal to one (product = 1). Indent this into the fist loop.
+	Make an empty set into which the new values will be inserted: (Product_list = set()).
+	Insert this list before the loops.
+	Need to make sure, it won't add the product of itself, by using "if".
+	Tell to do a calculation if i isnt equal to k.
+	calculation: product = product * N[k]
+	once second loop loops round all numbers, add product into Product_list:
+	Product_list.add(product)
