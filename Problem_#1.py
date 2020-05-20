@@ -32,3 +32,5 @@ def two_sum2 (N,k):
     return False
     
 
+
+    
