@@ -18,21 +18,36 @@ You can modify the input array in-place.
 
 def missing_num(N):
     
-    N.sort()
+    if not N:
+        print (1)
     
-    print(N)
-    
-    for i in range(len(N)):
-        if N[i] == (-1) and N[i+1] != 0 and N[i+1] != 1:
-            print (1)
-        elif N[i] >= 0 and N[i+1] != (N[i]+1):
-            print (N[i]+1)
-        elif N[len(N)]:
-            print (N[i]+1)
+    for i, num in enumerate(N):
+        #while the array isn't in order starting from 1
+        #and the number is positive and smaller than the number of elements in array 
+        while i + 1 != N[i] and 0 < N[i] <= len(N):
             
-    
+            v = N[i]
+            N[i], N[v - 1] = N[v - 1], N[i]
             
+            if N[i]==N[v - 1]:
+                break
+            
+    for i, num in enumerate(N, 1):
+        if num != i:
+            print (i)
     
-list1 = [1,2,0]
+    print (len(N)+1)
 
-missing_num(list1)
+def missing_num2(N):
+    s = set(N)
+    print (s)
+    i = 1
+    
+    while i in s:
+        i += 1
+    print (i)
+
+
+    
+
+
