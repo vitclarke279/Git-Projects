@@ -1,0 +1,22 @@
+Given the root to a binary tree, count the number of unival subtrees.
+
+For example, the following tree has 5 unival subtrees:
+
+       0
+      / \
+     1   0
+        / \
+       1   0
+      / \
+     1   1
+
+Solution
+We can start off by first writing a function that checks whether a tree is unival or not. 
+Then, perhaps we could use this to count up all the nodes in the tree.
+
+To check whether a tree is a unival tree, we must check that every node in the tree has the same 
+value. To start off, we could define an is_unival function that 
+takes in a root to a tree. We would do this recursively with a helper function. 
+Recall that a leaf qualifies as a unival tree.
+
+Then our function that counts the number of subtrees could simplify that function
